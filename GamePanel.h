@@ -31,7 +31,7 @@ public slots:
     void OnUserPlayHand();
     //////////////////////////////////////////////////////////////////////////
 
-    void OnCardWidgetking();
+    void OnCardWidgetPicking();
 
     void OnCardWidgetSelected(Qt::MouseButton mouseButton);
 

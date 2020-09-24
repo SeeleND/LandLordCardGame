@@ -42,7 +42,7 @@ GamePanel::GamePanel(QWidget *parent) :
     // 发牌效果所用的计时器
     m_pickCardTimer = new QTimer(this);
     m_pickCardTimer->setInterval(80);
-    connect(m_pickCardTimer, &QTimer::timeout, this, &GamePanel::OnCardWidgetking);
+    connect(m_pickCardTimer, &QTimer::timeout, this, &GamePanel::OnCardWidgetPicking);
 }
 
 void GamePanel::InitPlayerContext()
@@ -249,7 +249,7 @@ void GamePanel::resizeEvent(QResizeEvent* event)
     UpdatePlayerCards(m_gameControl->GetRightRobot());
 }
 
-void GamePanel::OnCardWidgetking()
+void GamePanel::OnCardWidgetPicking()
 {
     Player* curPlayer = m_gameControl->GetCurrentPlayer();
 
